@@ -9,6 +9,7 @@ const App = () => {
   // the state properties here.
   const [people, setPeople] = useState([]);
   // const [planets, setPlanets] = useState([]);
+  const [birth, setBirth] = useState([]);
   const [loading, setLoading] = useState(true);
 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
@@ -19,6 +20,7 @@ const App = () => {
     axios.get('https://swapi.dev/api/people').then( res => {
       console.log(res.data)
       setPeople(res.data);
+      setBirth(res.data)
   }).catch( res => console.error(res.data));
   }, [])
 
@@ -26,9 +28,9 @@ const App = () => {
   
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header">REACT WARS ></h1>
       <>
-      <Character className="Character" data={people}/>
+      <Character className="Character" data={people, birth}/>
       </>
     </div>
   );

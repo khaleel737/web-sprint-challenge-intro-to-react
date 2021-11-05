@@ -2,30 +2,31 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components';
 
-const styledCard = styled.div`
-  opacity: 0;
-  transform: scale(2) rotateZ(180deg);
-  animation: 0.5s ease-in-out forwards;
-  background-color: purple;
-  h2 {
-    color: black;
-  }
-  p {
-    color: white;
-  }
+const StyledCard = styled.div`
+ 
+  color: white;
+  margin: 4% 20% 0% 20%;
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
 `
 
 
 export default function Character({data}) {
     return (
         <>
-            <h1>Character</h1>
-            <div columns={1}>
+            <div>
             {data.map((character, i) => {
                 return (
-                    <styledCard className="Character" key={i}>
+                    <StyledCard  className="Character" key={i}>
+                        <div>
                                 {character.name}
-                    </styledCard>
+                                </div>
+                                <div>
+                                {character.birth_year}
+                                </div>
+                    </StyledCard>
                 );
             })}
             </div>
