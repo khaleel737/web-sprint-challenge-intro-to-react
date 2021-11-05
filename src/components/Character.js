@@ -2,10 +2,12 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components';
 
+
+
 const StyledCard = styled.div`
  
   color: white;
-  margin: 4% 20% 0% 20%;
+  margin: 2% 20% 0% 20%;
   border: 1px solid green;
   display: flex;
   justify-content: center;
@@ -19,7 +21,7 @@ export default function Character({data}) {
             <div>
             {data.map((character, i) => {
                 return (
-                    <StyledCard  className="Character" key={i}>
+                    <StyledCard className="Character" key={i}>
                         <div>
                                 {character.name}
                                 </div>

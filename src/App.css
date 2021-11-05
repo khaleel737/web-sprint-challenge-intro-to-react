@@ -9,6 +9,8 @@
 .Character {
     display: grid;
     color: white;
-    font-size: 4em;
-    margin: 3% 0 0 0;
+    font-size: 3em;
+    margin: 1% 0 0 0;
+    font-family: 'DotGothic16', sans-serif;
+    padding: 1%;
 }
